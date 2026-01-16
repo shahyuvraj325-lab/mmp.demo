@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ne">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shankar — DJ Page</title>
+  <link rel="stylesheet" href="a.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Shankar</h1>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container hero-inner">
+      <section class="intro">
+        <h2>Welcome to Shankar</h2>
+        <p>Simple HTML + CSS page — photo area shows "DJ".</p>
+      </section>
+
+      <aside class="photo-placeholder" aria-label="Photo placeholder">
+        <span class="dj-text">DJ</span>
+      </aside>
+    </div>
+  </main>
+
+  <section class="features container">
+    <div class="card">
+      <h3>Service One</h3>
+      <p>Short description.</p>
+    </div>
+    <div class="card">
+      <h3>Service Two</h3>
+      <p>Short description.</p>
+    </div>
+    <div class="card">
+      <h3>Service Three</h3>
+      <p>Short description.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Shankar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

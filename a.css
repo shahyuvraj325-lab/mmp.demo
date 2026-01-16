@@ -1,0 +1,111 @@
+:root{
+  --bg:#071326;
+  --card:#0b2233;
+  --accent:#ff5a5f;
+  --muted:#9aa6b2;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --maxw:1000px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(180deg,#061222 0%, green 100%);
+  color:red;
+}
+
+.container{
+  width:90%;
+  max-width:var(--maxw);
+  margin:0 auto;
+}
+
+.site-header{
+  padding:18px 0;
+  background:transparent;
+}
+.site-header .logo{
+  display:inline-block;
+  margin:0;
+  font-weight:700;
+  font-size:22px;
+  color:var(--accent);
+}
+.nav{float:right}
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:16px;
+  font-size:15px;
+}
+.nav a:hover{color:#fff}
+
+.hero{
+  padding:48px 0;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:28px;
+  align-items:center;
+}
+
+.intro h2{margin:0 0 8px 0;font-size:32px}
+.intro p{margin:0;color:var(--muted)}
+
+.photo-placeholder{
+  height:320px;
+  border-radius:var(--radius);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)),
+    radial-gradient(circle at 20% 20%, rgba(255,90,95,0.08), transparent 20%),
+    var(--card);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 8px 28px rgba(2,8,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  position:relative;
+  overflow:hidden;
+}
+
+.dj-text{
+  font-size:96px;
+  font-weight:800;
+  color:rgba(255,255,255,0.92);
+  letter-spacing:6px;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  padding:34px 0;
+}
+.card{
+  background:var(--glass);
+  border-radius:12px;
+  padding:18px;
+  color:var(--muted);
+  min-height:110px;
+}
+.card h3{color:#fff;margin:0 0 8px 0;font-size:18px}
+
+.site-footer{
+  border-top:1px solid rgba(255,255,255,0.03);
+  padding:18px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+}
+
+@media (max-width:880px){
+  .hero-inner{grid-template-columns:1fr; text-align:center}
+  .nav{float:none;margin-top:10px}
+  .features{grid-template-columns:1fr}
+  .photo-placeholder{height:220px}
+  .dj-text{font-size:64px}
+}
